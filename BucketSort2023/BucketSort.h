@@ -10,14 +10,14 @@ class CBucketSort
 {
 
 private:
-	void gathering_pass(std::vector<int>  buckets_2d[10], std::vector<int>& output);
-	void distribution_pass(std::vector<int>& input_list, int index_number, std::vector<int>  buckets_2d[10]);
-	int int_digit(int number, int index);
+	void GatheringPass(std::vector<int>  buckets_2d[10], std::vector<int>& output);
+	void DistributionPass(std::vector<int>& input_list, int index_number, std::vector<int>  buckets_2d[10]);
+	int DigitFromInt(int number, int index);
 public:
 	CBucketSort()
 	{
 
 	}
 	vector<int> BucketSort(std::vector<int> input_list);
-	int get_amount_digits(std::vector<int>& input_list);
+	int GetAmountDigits(std::vector<int>& input_list);
 };
