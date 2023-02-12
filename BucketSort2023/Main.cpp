@@ -2,9 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <chrono>
-#include "Main.h"
 
-using namespace std;
 using namespace std::chrono;
 
 void CreateRandomArray(std::vector<int>& vector,int amount_numbers,int range , int range_into_negatives)

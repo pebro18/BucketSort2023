@@ -5,7 +5,7 @@ vector<int> CBucketSort::BucketSort(std::vector<int> input_list)
 	int amount_negative_numbers = 0;
 
 	// determines the amount needed for the loop
-	int amount_digits = get_amount_digits(input_list);;
+	int amount_digits = get_amount_digits(input_list);
 
 	for (int i = 0; i < amount_digits; i++)
 	{
@@ -21,8 +21,8 @@ vector<int> CBucketSort::BucketSort(std::vector<int> input_list)
 		// negative numvbers become positive for ease of use in the distribution pass
 		for (size_t i = 0; i < input_list.size(); i++)
 		{
-			if (input_list[i] >= 0) pos_numbers.push_back(input_list[i]);
-			else neg_numbers.push_back(input_list[i] * -1);
+			if (input_list[i] >= 0) pos_numbers.push_back(input_list[i]); // 1 bool 1 write
+			else neg_numbers.push_back(input_list[i] * -1); // 
 		}
 		// determine the amount of negative numbers to be used at the end
 		amount_negative_numbers = neg_numbers.size();
@@ -41,7 +41,7 @@ vector<int> CBucketSort::BucketSort(std::vector<int> input_list)
 	}
 
 	// at the end of the sorting turn the the negative numbers from asc to dsc
-	reverse(input_list.begin(), input_list.begin() + amount_negative_numbers);
+	std::reverse(input_list.begin(), input_list.begin() + amount_negative_numbers);
 	return input_list;
 }
 
