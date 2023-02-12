@@ -1,3 +1,0 @@
-
-
-void Run_test();
