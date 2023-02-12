@@ -21,8 +21,8 @@ vector<int> CBucketSort::BucketSort(std::vector<int> input_list)
 		// negative numvbers become positive for ease of use in the distribution pass
 		for (size_t i = 0; i < input_list.size(); i++)
 		{
-			if (input_list[i] >= 0) pos_numbers.push_back(input_list[i]); // 1 bool 1 write
-			else neg_numbers.push_back(input_list[i] * -1); // 
+			if (input_list[i] >= 0) pos_numbers.push_back(input_list[i]);
+			else neg_numbers.push_back(input_list[i] * -1);
 		}
 		// determine the amount of negative numbers to be used at the end
 		amount_negative_numbers = neg_numbers.size();
@@ -48,7 +48,7 @@ vector<int> CBucketSort::BucketSort(std::vector<int> input_list)
 // Distributes all numbers into their respective buckets based on given index number into a 2d array
 void CBucketSort::distribution_pass(std::vector<int>& input_list, int index_number, vector<int> buckets_2d[10])
 {
-	for (int i = 0; i < input_list.size(); i++)
+	for (int i = 0; i < input_list.size(); i++) 
 	{
 		int single_number = int_digit(input_list[i], index_number);
 		buckets_2d[single_number].push_back(input_list[i]);
